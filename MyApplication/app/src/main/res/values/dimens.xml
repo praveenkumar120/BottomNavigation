@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_1">1dp</dimen>
+    <dimen name="spacing_6">6dp</dimen>
+    <dimen name="spacing_10">10dp</dimen>
+    <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_20">20dp</dimen>
+    <dimen name="spacing_30">30dp</dimen>
+    <dimen name="spacing_35">35dp</dimen>
+    <dimen name="spacing_40">40dp</dimen>
+    <dimen name="spacing_50">50dp</dimen>
+    <dimen name="spacing_60">60dp</dimen>
+</resources>

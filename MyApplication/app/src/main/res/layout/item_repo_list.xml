@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.praveen.myapplication.data.ItemsItem" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_repo"
+            android:layout_width="@dimen/spacing_60"
+            android:layout_height="@dimen/spacing_60"
+            android:layout_margin="@dimen/spacing_10"
+            app:glideUrl="@{data.avatarUrl}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_organization"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_10"
+            android:text="@{data.login}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/iv_repo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_10"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:text="@{data.score.toString()}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/iv_repo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_10"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:text="@{data.url}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/iv_repo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_score" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_organization"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_10"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:text="@{data.organizationsUrl}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toEndOf="@+id/iv_repo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_url" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_enter_comments"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_50"
+            android:layout_marginStart="@dimen/spacing_10"
+            android:layout_marginEnd="@dimen/spacing_10"
+            android:layout_marginTop="@dimen/spacing_20"
+            android:background="@drawable/bg_grey"
+            android:hint="@string/enter_comments"
+            android:padding="@dimen/spacing_10"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_organization" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_1"
+            android:layout_marginTop="@dimen/spacing_16"
+            android:background="@android:color/darker_gray"
+            android:paddingBottom="@dimen/spacing_20"
+            app:layout_constraintTop_toBottomOf="@+id/et_enter_comments" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
